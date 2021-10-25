@@ -8,10 +8,10 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.text}>Hell Ya!</Text>
+      <Text style={styles.text}>Done With It</Text>
       <TouchableOpacity onPress={() => console.log("touched")}>
         <Image
-          source={{ uri: "https://picsum.photos/200/300" }}
+          source={require("./assets/san_diego.png")}
           style={styles.image}
           resizeMode={"cover"}
         />
