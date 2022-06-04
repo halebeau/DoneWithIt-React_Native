@@ -30,7 +30,8 @@ const styles = StyleSheet.create({
     color: colors.medium,
   },
   title: {
-    fontWeight: "500",
+    fontWeight: "600",
+    fontSize: 21,
   },
 });
 
