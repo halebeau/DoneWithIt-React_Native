@@ -1,26 +1,30 @@
-import { FlatList } from 'react-native'
-import React from 'react'
-import ListItem from '../components/ListItem'
-import { SafeAreaView } from 'react-native-web'
+import {
+  FlatList,
+  SafeAreaView,
+  StyleSheet,
+} from "react-native"
+import React from "react"
+import ListItem from "../components/ListItem"
+import Constants from 'expo-constants'
 
 const messages = [
   {
     id: 1,
-    title: 'T1',
-    description: 'D1',
-    image: require('../assets/beau_small.png')
+    title: "T1",
+    description: "D1",
+    image: require("../assets/beau_small.png"),
   },
   {
     id: 2,
-    title: 'T2',
-    description: 'D2',
-    image: require('../assets/beau_small.png')
-  }
+    title: "T2",
+    description: "D2",
+    image: require("../assets/beau_small.png"),
+  },
 ]
 
 export default function MessagesScreen() {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.screen}>
       <FlatList
         data={messages}
         keyExtractor={(message) => message.id.toString()}
@@ -35,3 +39,8 @@ export default function MessagesScreen() {
     </SafeAreaView>
   )
 }
+const styles = StyleSheet.create({
+  screen: {
+    paddingTop: Constants.statusBarHeight
+  },
+})
